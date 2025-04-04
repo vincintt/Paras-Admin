@@ -1,0 +1,185 @@
+/* Auth Specific Styles */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 2;
+}
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+.auth-logo {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: neonGlow 2s infinite alternate;
+}
+
+.auth-logo h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.7);
+}
+
+.cyber-form {
+    background-color: rgba(0, 15, 30, 0.8);
+    border: 1px solid rgba(0, 242, 255, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.cyber-label {
+    display: block;
+    color: #00f2ff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.cyber-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    color: white;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+    outline: none;
+    border-color: #00f2ff;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.cyber-btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #00f2ff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.cyber-btn-primary:hover {
+    background-color: #00d9e6;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+}
+
+.cyber-error {
+    color: #ff0033;
+    background-color: rgba(255, 0, 51, 0.1);
+    border: 1px solid rgba(255, 0, 51, 0.3);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00f2ff, 0 0 20px #00f2ff;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f2ff, 0 0 40px #00f2ff;
+    }
+}
+
+/* Notification styles */
+.cyber-notification-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1100;
+    width: 90%;
+    max-width: 400px;
+}
+
+.cyber-notification {
+    background-color: rgba(0, 15, 30, 0.9);
+    border: 1px solid #00f2ff;
+    color: white;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+    animation: slideIn 0.3s forwards;
+    width: 100%;
+}
+
+.cyber-notification.success {
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+.cyber-notification.error {
+    border-color: #ff0033;
+    box-shadow: 0 0 15px rgba(255, 0, 51, 0.3);
+}
+
+.cyber-notification.info {
+    border-color: #0099ff;
+    box-shadow: 0 0 15px rgba(0, 153, 255, 0.3);
+}
+
+.cyber-header {
+    margin-bottom: 8px;
+}
+
+.cyber-glitch {
+    font-weight: bold;
+    color: #00f2ff;
+}
+
+.cyber-content {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes slideIn {
+    from { transform: translate(-50%, -20px); opacity: 0; }
+    to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+.cyber-notification.hide {
+    animation: slideOut 0.3s forwards;
+}
+
+@keyframes slideOut {
+    from { transform: translate(-50%, 0); opacity: 1; }
+    to { transform: translate(-50%, -20px); opacity: 0; }
+}
+
+.error-message {
+    color: #ff0033;
+    padding: 15px;
+    background-color: rgba(255, 0, 51, 0.1);
+    border: 1px solid #ff0033;
+    border-radius: 4px;
+    text-align: center;
+}

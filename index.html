@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub Admin | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/auth.css" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-scanlines"></div>
+    
+    <div class="auth-container">
+        <div class="auth-logo">
+            <h1>GAME<span class="abouttxt">HUB</span></h1>
+            <p class="subtitle">ADMIN PORTAL</p>
+        </div>
+        
+        <form id="loginForm" class="cyber-form">
+            <div class="form-group">
+                <label for="username" class="cyber-label">EMAIL</label>
+                <input type="text" id="username" class="cyber-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="cyber-label">PASSWORD</label>
+                <input type="password" id="password" class="cyber-input" required>
+            </div>
+            
+            <button type="submit" class="cyber-btn-primary">
+                <i class="fas fa-terminal"></i> LOGIN
+            </button>
+            
+            <div id="loginError" class="cyber-error" style="display: none;"></div>
+        </form>
+    </div>
+    
+    <div class="cyber-notification-container" id="notificationContainer"></div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>
